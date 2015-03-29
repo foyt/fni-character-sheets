@@ -1,0 +1,219 @@
+<div id="character-sheet">  
+  <div class="basic-info">
+    <div class="basic-info-row">
+      <div class="basic-info-label">Nimi</div>
+      <input type="text" name="basic-name" class="i-field"/>
+    </div>
+    
+    <div class="basic-info-row">
+      <div class="basic-info-label">Ik&auml;</div>
+      <input type="text" name="basic-age" class="i-field"/>
+    </div>
+    
+    <div class="basic-info-row">
+      <div class="basic-info-label">Sukupuoli</div>
+      <input type="text" name="basic-sex" class="i-field"/>
+    </div>
+    
+    <div class="basic-info-row">
+      <div class="basic-info-label">Pituus</div>
+      <input type="text" name="basic-height" class="i-field"/>
+    </div>  
+    
+    <div class="basic-info-row">
+      <div class="basic-info-label">Paino</div>
+      <input type="text" name="basic-weight" class="i-field"/>
+    </div>                       
+  </div>
+  
+  <div class="image-container">
+    <div class="image-label">Kuva</div>
+    <div class="image">
+    </div>
+  </div>
+  
+  <div class="healths">
+    <label class="mental-health-label">Henkinen Kesto</label>
+    <div class="mental-health">
+      <input type="number" class="i-field mental-health-current" name="mental-health-current"/>
+      <input type="number" class="i-field-sum mental-health-total" name="mental-health-total" data-fields="input[name='property-intelligence'],input[name='property-charisma'],input[name='property-senses'],input[name='property-magicality']"/>
+    </div>
+    
+    <label class="physical-health-label">Fyysinen Kesto</label>
+    <div class="physical-health">
+      <input type="number" class="i-field physical-health-current" name="physical-health-current"/>
+      <input type="number" class="i-field-sum physical-health-total" name="physical-health-total" data-fields="input[name='property-strength'],input[name='property-endurance'],input[name='property-agility'],input[name='property-handiness']"/>
+    </div>
+  </div>
+  
+  <div class="properties">
+    <div class="property property-strength">
+      <div class="property-name">Voima</div>
+      <input type="number" class="i-field property-val" name="property-strength" data-exp-field="input[name='property-strength-exp']"/>
+      <div class="property-exp-container">
+        <input type="number" class="i-field property-exp" name="property-strength-exp" value="0"/>
+        <div class="i-progressbar" data-field="input[name='property-strength-exp']"></div>
+        <span>%</span>
+      </div>
+    </div>
+    <div class="property property-endurance">
+      <div class="property-name">Sitkeys</div>
+      <input type="number" class="i-field property-val" name="property-endurance" data-exp-field="input[name='property-endurance-exp']"/>
+      <div class="property-exp-container">
+        <input type="number" class="i-field property-exp" name="property-endurance-exp" value="0"/>
+        <div class="i-progressbar" data-field="input[name='property-endurance-exp']"></div>
+        <span>%</span>
+      </div>
+    </div>
+    <div class="property property-agility">
+      <div class="property-name">Ketteryys</div>
+      <input type="number" class="i-field property-val" name="property-agility" data-exp-field="input[name='property-agility-exp']"/>
+      <div class="property-exp-container">
+        <input type="number" class="i-field property-exp" name="property-agility-exp" value="0"/>
+        <div class="i-progressbar" data-field="input[name='property-agility-exp']"></div>
+        <span>%</span>
+      </div>
+    </div>
+    <div class="property property-handiness">
+      <div class="property-name">N&auml;pp&auml;ryys</div>
+      <input type="number" class="i-field property-val" name="property-handiness" data-exp-field="input[name='property-handiness-exp']"/>
+      <div class="property-exp-container">
+        <input type="number" class="i-field property-exp" name="property-handiness-exp" value="0"/>
+        <div class="i-progressbar" data-field="input[name='property-handiness-exp']"></div>
+        <span>%</span>
+      </div>
+    </div>
+    <div class="property property-intelligence">
+      <div class="property-name">&Auml;lykkyys</div>
+      <input type="number" class="i-field property-val" name="property-intelligence" data-exp-field="input[name='property-intelligence-exp']"/>
+      <div class="property-exp-container">
+        <input type="number" class="i-field property-exp" name="property-intelligence-exp" value="0"/>
+        <div class="i-progressbar" data-field="input[name='property-intelligence-exp']"></div>
+        <span>%</span>
+      </div>
+    </div>
+    <div class="property property-charisma">
+      <div class="property-name">Karisma</div>
+      <input type="number" class="i-field property-val" name="property-charisma" data-exp-field="input[name='property-charisma-exp']"/>
+      <div class="property-exp-container">
+        <input type="number" class="i-field property-exp" name="property-charisma-exp" value="0"/>
+        <div class="i-progressbar" data-field="input[name='property-charisma-exp']"></div>
+        <span>%</span>
+      </div>
+    </div>
+    <div class="property property-senses">
+      <div class="property-name">Aistit</div>
+      <input type="number" class="i-field property-val" name="property-senses" data-exp-field="input[name='property-senses-exp']"/>
+      <div class="property-exp-container">
+        <input type="number" class="i-field property-exp" name="property-senses-exp" value="0"/>
+        <div class="i-progressbar" data-field="input[name='property-senses-exp']"></div>
+        <span>%</span>
+      </div>
+    </div>
+    <div class="property property-magicality">
+      <div class="property-name">Maagisuus</div>
+      <input type="number" class="i-field property-val" name="property-magicality" data-exp-field="input[name='property-magicality-exp']"/>
+      <div class="property-exp-container">
+        <input type="number" class="i-field property-exp" name="property-magicality-exp" value="0"/>
+        <div class="i-progressbar" data-field="input[name='property-magicality-exp']"></div>
+        <span>%</span>
+      </div>
+    </div>
+  </div>
+  
+  <div class="description">
+    <label>Lyhyt kuvaus</label>
+    <textarea name="description" class="i-field"></textarea>
+  </div>
+  
+  <div class="page-break"></div>
+  
+  <div class="items">
+    <div class="items-image-container"></div>
+    <div class="equipment-image-container"></div>
+    
+    <table class="equipment-table left-table">
+      <tr><th>Varusteet</th></tr>
+      <tr><td><input type="text" name="equipment-1" class="i-field"/></td></tr>        
+      <tr><td><input type="text" name="equipment-2" class="i-field"/></td></tr>      
+      <tr><td><input type="text" name="equipment-3" class="i-field"/></td></tr>      
+      <tr><td><input type="text" name="equipment-4" class="i-field"/></td></tr>      
+      <tr><td><input type="text" name="equipment-5" class="i-field"/></td></tr>      
+      <tr><td><input type="text" name="equipment-6" class="i-field"/></td></tr>      
+      <tr><td><input type="text" name="equipment-7" class="i-field"/></td></tr>      
+      <tr><td><input type="text" name="equipment-8" class="i-field"/></td></tr>      
+    </table>
+    <table class="items-table">
+      <tr><th>Esineet</th></tr>  
+      <tr><td><input type="text" name="item-1" class="i-field"/></td></tr>
+      <tr><td><input type="text" name="item-2" class="i-field"/></td></tr>
+      <tr><td><input type="text" name="item-3" class="i-field"/></td></tr>
+      <tr><td><input type="text" name="item-4" class="i-field"/></td></tr>
+      <tr><td><input type="text" name="item-5" class="i-field"/></td></tr>
+      <tr><td><input type="text" name="item-6" class="i-field"/></td></tr>
+      <tr><td><input type="text" name="item-7" class="i-field"/></td></tr>
+      <tr><td><input type="text" name="item-8" class="i-field"/></td></tr>
+    </table>
+  </div>
+  
+  <div class="spells">
+    <div class="spells1-image-container"></div>
+    <div class="spells2-image-container"></div>
+    
+    <table class="spells1-table">
+      <tr><th>Loitsut</th></tr>
+      <tr><td><input type="text" name="spell-1" class="i-field"/></td></tr>        
+      <tr><td><input type="text" name="spell-2" class="i-field"/></td></tr>      
+      <tr><td><input type="text" name="spell-3" class="i-field"/></td></tr>      
+      <tr><td><input type="text" name="spell-4" class="i-field"/></td></tr>      
+      <tr><td><input type="text" name="spell-5" class="i-field"/></td></tr>      
+      <tr><td><input type="text" name="spell-6" class="i-field"/></td></tr>      
+      <tr><td><input type="text" name="spell-7" class="i-field"/></td></tr>      
+      <tr><td><input type="text" name="spell-8" class="i-field"/></td></tr>      
+    </table>
+    
+    <table class="spells2-table">
+      <tr><th>Loitsut</th></tr>
+      <tr><td><input type="text" name="spell-9" class="i-field"/></td></tr>        
+      <tr><td><input type="text" name="spell-10" class="i-field"/></td></tr>      
+      <tr><td><input type="text" name="spell-11" class="i-field"/></td></tr>      
+      <tr><td><input type="text" name="spell-12" class="i-field"/></td></tr>      
+      <tr><td><input type="text" name="spell-13" class="i-field"/></td></tr>      
+      <tr><td><input type="text" name="spell-14" class="i-field"/></td></tr>      
+      <tr><td><input type="text" name="spell-15" class="i-field"/></td></tr>      
+      <tr><td><input type="text" name="spell-16" class="i-field"/></td></tr>      
+    </table>
+  </div>
+
+  <div class="specials-weaknesses">
+    <div class="weaknesses-image-container">
+    </div>
+  
+    <div class="specials-image-container">
+    </div>
+
+    <table class="specials-table">
+      <tr><th>Erikoisuudet</th></tr>
+      <tr><td><input type="text" name="special-1" class="i-field"/></td></tr>
+      <tr><td><input type="text" name="special-2" class="i-field"/></td></tr>
+      <tr><td><input type="text" name="special-3" class="i-field"/></td></tr>
+    </table>
+    <table class="weaknesses-table">
+      <tr><th>Heikkoudet</th></tr>
+      <tr><td><input type="text" name="weakness-1" class="i-field"/></td></tr>
+      <tr><td><input type="text" name="weakness-2" class="i-field"/></td></tr>
+      <tr><td><input type="text" name="weakness-3" class="i-field"/></td></tr>
+    </table>
+  </div>
+
+  <div class="page-break"></div>
+
+  <div class="skills">
+    <h4>Taidot</h4>
+  </div>
+  
+  <div class="sheet-data" style="display: none">
+    <label>Lomakkeen datat</label>
+    <a class="i-data-link" href="#">Data Linkki</a>
+  </div>
+</div>
