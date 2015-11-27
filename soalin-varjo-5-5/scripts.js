@@ -1,4 +1,5 @@
 var EXP_TYPE = 'LVL_DIV';
+var EXP_MUL = 10;
 
 var PROPERTIES = {
   "strength" : "Voima",
@@ -14,6 +15,7 @@ var PROPERTIES = {
 };
 
 var SKILLS = [
+  { label: 'Jäljitys', properties : ['awareness','senses'] },
   { label: 'Ampuma-ase', properties : ['handiness','senses'] },
   { label: 'Antimagia', properties : ['intelligence','magicality'] },
   { label: 'Arkkitehtuuri', properties : ['intelligence','wisdom'] },
@@ -70,7 +72,7 @@ function showMessage(type, message) {
   
   setTimeout($.proxy(function () {
     $(this).addClass('hidden');
-  }, e), 20000);
+  }, e), 120000);
 }
 
 function getFieldExpField(field) {
@@ -94,7 +96,7 @@ function getExpFieldProperty(expField) {
 function calculateExp(level, roll) {
   switch (EXP_TYPE) {
     case 'LVL_DIV':
-      return Math.round(roll / Math.max(level||0, 1));
+      return Math.min(Math.round((roll / Math.max(level||0, 1)) * EXP_MUL), 100);
     break;
     default:
       return Math.round(roll);
@@ -158,7 +160,7 @@ $(document).ready(function() {
     .appendTo($('.healths'));
   
   var skills = SKILLS.sort(function(s1, s2) {
-    return s1.label < s2.label;
+    return s2.label.localeCompare(s1.label);
   });
 
   for (var i = 0, l = skills.length; i < l; i++) {
